@@ -1,3 +1,22 @@
+
+function limpiarCampos()
+{
+    document.getElementById("txtUsername").value = "";
+    document.getElementById("txtNombre").value = "";
+    document.getElementById("txtApellido").value = "";
+    var radios = document.getElementsByName("genero");
+    for(var i = 0;i < radios.length;i++)
+    {
+        radios[i].checked = false;
+    }
+    document.getElementById("txtEmail").value = "";
+    document.getElementById("txtRepetirEmail").value = "";
+    document.getElementById("txtTelefono").value = "";
+    document.getElementById("ddlProvincia").value = "0";
+    document.getElementById("txtPassword").value = "";
+    document.getElementById("txtRepetirPassword").value = "";
+}
+
 document.getElementById("btnGuardar").addEventListener("click",function(){
 
     /*Validación de campos vacios*/
@@ -164,7 +183,7 @@ document.getElementById("btnGuardar").addEventListener("click",function(){
         icon: "success",
         button: "Aceptar",
     });
-
+    limpiarCampos();
 });
 
 
